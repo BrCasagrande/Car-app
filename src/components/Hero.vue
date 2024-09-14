@@ -17,5 +17,5 @@ defineProps({
         {{title}}
     </h3>
     <p>{{ subtitle }}</p>
-    <img src="../img/banner.jpg" alt="">
+    <img src="../img/banner.png" alt="">
 </template>
