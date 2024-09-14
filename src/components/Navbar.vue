@@ -4,10 +4,12 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <nav class="space-x-2">
-        <RouterLink to="/">home</RouterLink>
-        <RouterLink to="/cars">cars</RouterLink>
-        <RouterLink to="/cars/add">Add</RouterLink>
-        <RouterLink to="/about">voce</RouterLink>
+    <nav class="font-bold space-x-2 bg-gradient-to-b from-slate-400 to-slate-600 h-12 flex">
+        <RouterLink to="/" ><img src="../img/fiat-logo-2.png" alt="Fiat" class="h-full"></RouterLink>
+        <RouterLink to="/" class="transition ease-in-out duration-300 content-center h-full hover:bg-gradient-to-b from-gray-500 to-gray-700 hover:text-zinc-300 p-1">Home</RouterLink>
+        <RouterLink to="/cars" class="transition ease-in-out duration-300 content-center h-full hover:bg-gradient-to-b from-gray-500 to-gray-700 hover:text-zinc-300 p-1">Cars</RouterLink>
+        <RouterLink to="/cars/add" class="transition ease-in-out duration-300 content-center h-full hover:bg-gradient-to-b from-gray-500 to-gray-700 hover:text-zinc-300 p-1">Add Car</RouterLink>
+        <RouterLink to="/about" class="transition ease-in-out duration-300 content-center h-full hover:bg-gradient-to-b from-gray-500 to-gray-700 hover:text-zinc-300 p-1">About Us</RouterLink>
+       
     </nav>
 </template>
