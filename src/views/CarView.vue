@@ -13,7 +13,6 @@ const carId = route.params.id;
 const state = reactive({
    car: {},
 });
-
 const deleteCar = async () => {
     try {
 
@@ -43,6 +42,7 @@ onMounted(async () =>{
 <template>
     car view
     <p>{{ state.car.type }}</p>
+    <img :src="state.car.carImage">
     <p>{{ state.car.description }}</p>
     <p>{{ state.car.location }}</p>
     <p>{{ state.car.price }}</p>

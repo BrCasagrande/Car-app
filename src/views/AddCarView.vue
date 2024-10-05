@@ -1,6 +1,6 @@
 <script setup>
 import router from '@/router';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { useToast } from 'vue-toastification';
 import axios from 'axios';
 
@@ -9,6 +9,7 @@ const form = reactive({
     description:"",
     location:"Tamashi",
     price:"",
+    carImage:"",
     company:{
     name:"Shigen Box",
     description:"wakaranai"
@@ -23,6 +24,7 @@ const handleSubmit = async () => {
         description:form.description,
         location:"Tamashi",
         price:"",
+        carImage:"",
         company:{
         name:"Shigen Box",
         description:"wakaranai"
@@ -40,38 +42,50 @@ const handleSubmit = async () => {
     }
 };
 
+
+
 </script>
 
 <template>
-Add Car
-<div class="w-4/5">
+<div class="w-4/5 p-2 md:p-12">
+    <h2 class="font-bold p-2 ">New Car</h2>
     <form @submit.prevent="handleSubmit">
-
-        <select 
-            v-model="form.type"
-            name="type" 
-            id="type" 
-            class="border rounded w-full py-2 px-3 " 
-            required>
+        <label for="car">Brand</label>
+        <section class="m-2">
+            <select 
+                v-model="form.type"
+                name="type" 
+                id="type" 
+                class="border rounded w-full py-2 px-3 " 
+                required>
+            
+                <option value="Suzuki">Suzuki</option>
+                <option value="Yamaha">Yamaha</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Brazilia">Brazilia</option>
+                <option value="Samsung">Samsung</option>
+            </select>
+        </section>
         
-            <option value="Suzuki">Suzuki</option>
-            <option value="Yamaha">Yamaha</option>
-            <option value="Toyota">Toyota</option>
-            <option value="Brazilia">Brazilia</option>
-            <option value="Samsung">Samsung</option>
-        </select>
         
-        <input 
-            v-model="form.description"
-            type="text"
-            name="name" 
-            id="name" 
-            class="border rounded w-full py-2 px-3 mb-2" 
-            required/>
+        <label for="car">Description</label>
+        <section class="m-2">
+            <textarea
+                v-model="form.description"
+                type="text"
+                name="name" 
+                id="name" 
+                class="border rounded w-full py-2 px-3 mb-2" 
+                required>
+            </textarea>
 
-            <button type="submit">Add Car</button>
+        </section>
+
+            <button type="submit" class=" hover:bg-gradient-to-b from-green-400 to-emerald-600 p-2 border rounded bg-gray-500">Add Car</button>
             
     </form>
+
+   
 </div>
 
 
