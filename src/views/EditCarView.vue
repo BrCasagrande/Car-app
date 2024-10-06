@@ -15,7 +15,7 @@ const form = reactive({
     location:"Tamashi",
     price:"",
     company:{
-    name:"Shigen Box",
+    name:"SB",
     description:"wakaranai"
     }
 });
@@ -30,11 +30,12 @@ const handleSubmit = async () => {
     const updateCar = {
         type:form.type,
         description:form.description,
-        location:"Tamashi",
-        price:"",
+        location: form.location,
+        price:form.price,
+        carImage:form.carImage,
         company:{
-        name:"Shigen Box",
-        description:"wakaranai"
+        name:form.company.name,
+        description:form.company.description
         }
     }
     console.log(updateCar);
@@ -57,6 +58,11 @@ onMounted(async () => {
 
         form.type = state.car.type;
         form.description = state.car.description;
+        form.location = state.car.location;
+        form.price = state.car.price;
+        form.carImage = state.car.carImage;
+        form.company.name = state.car.company.name;
+        form.company.description = state.car.company.description;
     } catch (error) {
         console.error('Error fetching car ', error);
     }
@@ -65,9 +71,9 @@ onMounted(async () => {
 </script>
 
 <template>
-Add Car
-<div class="w-4/5">
-    <form @submit.prevent="handleSubmit">
+    Edit Car
+    <div class="w-4/5 m-2 bg-gray-300 place-content-center">
+        <form @submit.prevent="handleSubmit" class="m-2">
 
         <select 
             v-model="form.type"
@@ -81,17 +87,61 @@ Add Car
             <option value="Toyota">Toyota</option>
             <option value="Brazilia">Brazilia</option>
             <option value="Samsung">Samsung</option>
+            <option value="Camaro">Camaro</option>
         </select>
-        
-        <input 
+        <label for="carImage">Car Image</label>
+        <img :src=form.carImage 
+            name="carImage" 
+            id="carImage"
+            alt="">
+        <label for="description">Car Description</label>
+        <textarea 
             v-model="form.description"
             type="text"
-            name="name" 
-            id="name" 
+            name="description" 
+            id="description" 
+            class="border rounded w-full py-2 px-3 mb-2" 
+            required></textarea>
+        <label for="location">Location</label>    
+        <input 
+            v-model="form.location"
+            type="text"
+            name="location" 
+            id="location" 
             class="border rounded w-full py-2 px-3 mb-2" 
             required/>
 
-            <button type="submit">Update Car</button>
+        <label for="price">Price</label> 
+        <input 
+            v-model="form.price"
+            type="text"
+            name="price" 
+            id="price" 
+            class="border rounded w-full py-2 px-3 mb-2" 
+            required/>    
+
+        <label for="cname">Company Name</label> 
+        <input 
+            v-model="form.company.name"
+            type="text"
+            name="cname" 
+            id="cname" 
+            class="border rounded w-full py-2 px-3 mb-2" 
+            required/>  
+
+        <label for="cdescription">Company Description</label> 
+        <input 
+            v-model="form.company.description"
+            type="text"
+            name="cdescription" 
+            id="cdescription" 
+            class="border rounded w-full py-2 px-3 mb-2" 
+            required/>  
+       
+
+            <button type="submit" class="transition ease-in-out duration-200 bg-emerald-500 
+            p-2 rounded hover:bg-emerald-400 hover:shadow-inner hover:shadow-emerald-700 
+            active:bg-indigo-500 active:text-white active:shadow-indigo-700 ">Update Car</button>
             
     </form>
 </div>

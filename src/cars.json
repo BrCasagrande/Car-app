@@ -1,11 +1,11 @@
 {
   "cars": [
     {
-      "type": "Suzuki",
-      "description": "Camaro",
+      "type": "Camaro",
+      "description": "The Chevrolet Camaro is a classic American muscle car that has been in production since 1966, initially introduced to compete with the Ford Mustang. It has gone through multiple generations, with its iconic design evolving over the years, while still retaining its performance-focused spirit.",
       "location": "Tamashi",
-      "price": "2",
-      "carImage": "src/img/camaro.webp",
+      "price": "25000",
+      "carImage": "camaro.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -18,7 +18,7 @@
       "description": "Toyota 2018",
       "location": "Tamashi",
       "price": "180000",
-      "carImage": "src/img/bus.webp",
+      "carImage": "bus.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -30,7 +30,7 @@
       "description": "Brazilia 1989",
       "location": "Tamashi",
       "price": "180000",
-      "carImage": "src/img/ferrari.webp",
+      "carImage": "ferrari.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -42,7 +42,7 @@
       "description": "Samsung 3021",
       "location": "Tamashi",
       "price": "180000",
-      "carImage": "src/img/taxi.webp",
+      "carImage": "taxi.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -53,8 +53,8 @@
       "type": "Brazilia",
       "description": "455",
       "location": "Tamashi",
-      "price": "",
-      "carImage": "src/img/brasilia.webp",
+      "price": "78000",
+      "carImage": "brasilia.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -65,8 +65,8 @@
       "type": "Samsung",
       "description": "Samsung 3021",
       "location": "Tamashi",
-      "price": "",
-      "carImage": "src/img/ferrari.webp",
+      "price": "12000",
+      "carImage": "ferrari.webp",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"
@@ -79,6 +79,30 @@
       "location": "Tamashi",
       "price": "",
       "carImage": "",
+      "company": {
+        "name": "Shigen Box",
+        "description": "wakaranai"
+      }
+    },
+    {
+      "id": "7b59",
+      "type": "Samsung",
+      "description": "weqwe",
+      "location": "Tamashi",
+      "price": "",
+      "carImage": "",
+      "company": {
+        "name": "Shigen Box",
+        "description": "wakaranai"
+      }
+    },
+    {
+      "id": "ff43",
+      "type": "Toyota",
+      "description": "test",
+      "location": "Tamashi",
+      "price": "",
+      "carImage": "fiat-logo-2.png",
       "company": {
         "name": "Shigen Box",
         "description": "wakaranai"

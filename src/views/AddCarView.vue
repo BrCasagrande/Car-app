@@ -24,7 +24,7 @@ const handleSubmit = async () => {
         description:form.description,
         location:"Tamashi",
         price:"",
-        carImage:"",
+        carImage:"fiat-logo-2.png",
         company:{
         name:"Shigen Box",
         description:"wakaranai"
@@ -42,7 +42,9 @@ const handleSubmit = async () => {
     }
 };
 
-
+const onChangeFile = (event)=> {
+      this.$emit('update:modelValue', event.target.files[0])
+    }
 
 </script>
 
@@ -66,8 +68,8 @@ const handleSubmit = async () => {
                 <option value="Samsung">Samsung</option>
             </select>
         </section>
-        
-        
+        <input type="file" @change="onChangeFile" name="file" />
+        <MyInputFileComponent v-model="form.carImage" />
         <label for="car">Description</label>
         <section class="m-2">
             <textarea
