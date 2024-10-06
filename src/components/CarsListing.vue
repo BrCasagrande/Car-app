@@ -25,11 +25,11 @@ console.log(cars.value.length)
 </script> 
 
 <template>
-    <section class="grid grid-cols-7 gap-4">
+    <section class="grid  md:grid-cols-7 gap-4 place-content-center">
         <CarListing v-for="car in cars.slice(0, limit || cars.length)" :key="car.id" :car="car"/>
     </section>
-    <section v-if="showButton" class="transition ease-in-out duration-300 bg-red-500 w-1/12 text-center rounded drop-shadow-lg m-4 p-1 text-white hover:bg-green-500">
-        <RouterLink to="/cars">View All Cars</RouterLink>
+    <section v-if="showButton">
+        <RouterLink to="/cars" class="transition ease-in-out duration-300 bg-red-500 w-1/12 text-center rounded drop-shadow-lg m-2 p-2 text-white hover:bg-green-500">View All Cars</RouterLink>
     </section>
 </template>
 
