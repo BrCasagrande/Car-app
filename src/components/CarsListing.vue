@@ -25,7 +25,7 @@ console.log(cars.value.length)
 </script> 
 
 <template>
-    <section class="grid  md:grid-cols-6 gap-4 place-content-center m-12">
+    <section class="grid  md:grid-cols-6 gap-4 m-12">
         <CarListing v-for="car in cars.slice(0, limit || cars.length)" :key="car.id" :car="car"/>
     </section>
     <section v-if="showButton">
