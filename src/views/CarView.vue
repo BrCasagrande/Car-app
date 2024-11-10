@@ -40,12 +40,27 @@ onMounted(async () =>{
 </script>
 
 <template>
-    car view
-    <p>{{ state.car.type }}</p>
-    <img :src="'/src/img/'+ state.car.carImage ">
-    <p>{{ state.car.description }}</p>
-    <p>{{ state.car.location }}</p>
-    <p>{{ state.car.price }}</p>
-    <RouterLink :to="`/cars/edit/${state.car.id}`">Edit Car</RouterLink>
-    <button @click="deleteCar">Delete Car</button>
+    <h2>Car View</h2>
+    <section class="grid justify-items-center">
+        <div class="grid grid-cols-2 p-2 rounded auto-cols-min w-9/12 bg-slate-200 text-justify ">
+            <section >
+                <p>{{ state.car.type }}</p>
+                <img  :src="'/src/img/'+ state.car.carImage ">
+            </section>
+
+            <section class="p-4" >
+                <div class="h-5/6">
+                    <h4>Description</h4>
+                    <p class="my-2">{{ state.car.description }}</p>
+                    <p>Location:{{ state.car.location }}</p>
+                    <p>Price: ￥ {{ state.car.price }}</p>
+                </div>
+                <div class="grid grid-cols-2 text-center items-end">
+                    <RouterLink :to="`/cars/edit/${state.car.id}`" class="bg-emerald-300 rounded p-2 m-4 hover:bg-emerald-500">Edit Car</RouterLink>
+                    <button @click="deleteCar" class="bg-red-300 rounded p-2 m-4 hover:bg-red-500">Delete Car</button>
+                </div>
+            </section>
+        </div>
+
+    </section>
 </template>

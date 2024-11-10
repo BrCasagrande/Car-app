@@ -15,7 +15,7 @@
     {
       "id": "2",
       "type": "Toyota",
-      "description": "Toyota 2018",
+      "description": " Overview: Redesigned for 2018, the Camry offers a sportier look with enhanced performance. Engines: Available with a 2.5L 4-cylinder or a 3.5L V6 engine.Features: Advanced safety tech like Toyota Safety Sense (TSS-P), which includes adaptive cruise control, lane departure alert, and automatic high beams.",
       "location": "Tamashi",
       "price": "180000",
       "carImage": "bus.webp",
@@ -26,8 +26,8 @@
     },
     {
       "id": "3",
-      "type": "Brazilia",
-      "description": "Brazilia 1989",
+      "type": "Ferrari",
+      "description": " Italian luxury sports car manufacturer known worldwide for its high-performance vehicles, advanced engineering, and iconic design. Each Ferrari model is meticulously crafted with powerful engines, precision handling, and striking aesthetics, capturing the essence of speed, elegance, and exclusivity.",
       "location": "Tamashi",
       "price": "180000",
       "carImage": "ferrari.webp",
@@ -38,8 +38,8 @@
     },
     {
       "id": "4",
-      "type": "Samsung",
-      "description": "Samsung 3021",
+      "type": "Taxi",
+      "description": "The Taxi 60 is compact, with a focus on maximizing passenger space while keeping the exterior size manageable for urban streets.",
       "location": "Tamashi",
       "price": "180000",
       "carImage": "taxi.webp",
@@ -62,10 +62,10 @@
     },
     {
       "id": "e44a",
-      "type": "Samsung",
-      "description": "Samsung 3021",
+      "type": "Ferrari",
+      "description": " Another Ferrari",
       "location": "Tamashi",
-      "price": "12000",
+      "price": "1200000",
       "carImage": "ferrari.webp",
       "company": {
         "name": "Shigen Box",
@@ -73,35 +73,11 @@
       }
     },
     {
-      "id": "8357",
+      "id": "4fdb",
       "type": "Brazilia",
-      "description": "qweeq",
+      "description": "Brasilia teste",
       "location": "Tamashi",
-      "price": "",
-      "carImage": "",
-      "company": {
-        "name": "Shigen Box",
-        "description": "wakaranai"
-      }
-    },
-    {
-      "id": "7b59",
-      "type": "Samsung",
-      "description": "weqwe",
-      "location": "Tamashi",
-      "price": "",
-      "carImage": "",
-      "company": {
-        "name": "Shigen Box",
-        "description": "wakaranai"
-      }
-    },
-    {
-      "id": "ff43",
-      "type": "Toyota",
-      "description": "test",
-      "location": "Tamashi",
-      "price": "",
+      "price": 452,
       "carImage": "fiat-logo-2.png",
       "company": {
         "name": "Shigen Box",

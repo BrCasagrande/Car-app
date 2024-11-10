@@ -32,7 +32,7 @@ const handleSubmit = async () => {
         description:form.description,
         location: form.location,
         price:form.price,
-        carImage:form.carImage,
+        //carImage:form.carImage,
         company:{
         name:form.company.name,
         description:form.company.description
@@ -60,7 +60,7 @@ onMounted(async () => {
         form.description = state.car.description;
         form.location = state.car.location;
         form.price = state.car.price;
-        form.carImage = state.car.carImage;
+        //form.carImage = state.car.carImage;
         form.company.name = state.car.company.name;
         form.company.description = state.car.company.description;
     } catch (error) {
@@ -89,11 +89,11 @@ onMounted(async () => {
             <option value="Samsung">Samsung</option>
             <option value="Camaro">Camaro</option>
         </select>
-        <label for="carImage">Car Image</label>
+        <!--label for="carImage">Car Image</label>
         <img :src=form.carImage 
             name="carImage" 
             id="carImage"
-            alt="">
+            alt=""-->
         <label for="description">Car Description</label>
         <textarea 
             v-model="form.description"

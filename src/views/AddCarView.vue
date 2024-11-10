@@ -9,7 +9,7 @@ const form = reactive({
     description:"",
     location:"Tamashi",
     price:"",
-    carImage:"",
+    //carImage:"",
     company:{
     name:"Shigen Box",
     description:"wakaranai"
@@ -23,7 +23,7 @@ const handleSubmit = async () => {
         type:form.type,
         description:form.description,
         location:"Tamashi",
-        price:"",
+        price:form.price,
         carImage:"fiat-logo-2.png",
         company:{
         name:"Shigen Box",
@@ -68,8 +68,17 @@ const onChangeFile = (event)=> {
                 <option value="Samsung">Samsung</option>
             </select>
         </section>
-        <input type="file" @change="onChangeFile" name="file" />
-        <MyInputFileComponent v-model="form.carImage" />
+        <label for="price">Price</label>
+        <section class="m-2">
+            <input  v-model="form.price"
+                name="price" 
+                type="number"
+                id="price" 
+                class="border rounded w-full py-2 px-3 " 
+                required/>
+        </section>
+        <!--input type="file" @change="onChangeFile" name="file" />
+        <MyInputFileComponent v-model="form.carImage" /-->
         <label for="car">Description</label>
         <section class="m-2">
             <textarea
@@ -83,8 +92,8 @@ const onChangeFile = (event)=> {
 
         </section>
 
-            <button type="submit" class=" hover:bg-gradient-to-b from-green-400 to-emerald-600 p-2 border rounded bg-gray-500">Add Car</button>
-            
+        
+            <button type="submit" class=" hover:bg-gradient-to-b from-green-400 to-emerald-600 p-2 border rounded bg-gray-500">Add Car</button>            
     </form>
 
    
